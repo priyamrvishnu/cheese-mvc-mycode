@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default Title</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<form method="post">
+    <table>
+        <tr>
+            <td><label>Remove Cheese</label></td>
+            <td><input type="text" name="cheeseName"/></td></tr>
+        <tr>
+        <td><input type="submit" value="Add Cheese"/></td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

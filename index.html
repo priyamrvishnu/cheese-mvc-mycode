@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<h1 th:text="${title}">Default Title</h1>
+<nav th:replace="fragments :: navigation"></nav>
+
+<p th:unless = "${cheeses} and ${cheeses.size()}">no cheese :(</p>
+<tr th:each="mapItem : ${cheeses}">
+<ul>
+    <li><td th:text="${mapItem.key}">Key</td></li>
+    <td th:text="${mapItem.value}">Value</td>
+</ul>
+</tr>
+</body>
+</html>
